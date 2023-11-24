@@ -3,6 +3,7 @@ redis:
   enabled: true 
   auth:
     enabled: false
+
 jaeger:
   architecture: standalone
   enabled: true

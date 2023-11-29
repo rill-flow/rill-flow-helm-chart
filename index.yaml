@@ -2,6 +2,51 @@ apiVersion: v1
 entries:
   rill-flow:
   - apiVersion: v2
+    created: "2023-11-29T09:42:21.164525159Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.13.3
+    - condition: jaeger.enabled
+      import-values:
+      - child: jaeger.allInOne
+        parent: allInOne
+      - child: jaeger.query
+        parent: query
+      - child: jaeger.agent
+        parent: agent
+      - child: jaeger.collector
+        parent: collector
+      - child: jaeger.cassandra
+        parent: cassandra
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts/
+      version: 0.72.1
+    - condition: redis.enabled
+      import-values:
+      - child: redis.auth
+        parent: auth
+      - child: redis.commonLabels
+        parent: commonLabels
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.3.3
+    description: rill flow orchestration engine
+    digest: 749efea65444075448055e6b494336952027c9b2284dbfd352e35cf3edbba7b4
+    home: https://weibocom.github.io/rill-flow
+    keywords:
+    - rill flow
+    - orchestration
+    maintainers:
+    - name: axb
+      url: https://github.com/qdaxb
+    name: rill-flow
+    sources:
+    - https://github.io/weibocom/rill-flow
+    urls:
+    - https://github.com/rill-flow/rill-flow-helm-chart/releases/download/rill-flow-0.0.4/rill-flow-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     created: "2023-11-29T08:18:36.769677656Z"
     dependencies:
     - name: common
@@ -136,4 +181,4 @@ entries:
     urls:
     - https://github.com/rill-flow/rill-flow-helm-chart/releases/download/rill-flow-0.0.1/rill-flow-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-29T08:18:36.769691412Z"
+generated: "2023-11-29T09:42:21.164545477Z"

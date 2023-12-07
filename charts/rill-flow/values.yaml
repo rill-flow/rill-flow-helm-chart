@@ -62,7 +62,7 @@ rillFlow:
       rillFlowTraceEndpoint: "http://rill-flow-jaeger-collector:4317"
       rillFlowDagRedoUrl: "http://rill-flow-service:8080/flow/redo.json"
       rillFlowCallbackUrl: "http://rill-flow-service:8080/flow/finish.json"
-      rillFlowTraceQueryUrl: "http://rill-flow-jaeger-query:16686"
+      rillFlowTraceQueryHost: "http://rill-flow-jaeger-query:16686"
   ui:
     image:
       repository: weibocom/rill-flow-ui

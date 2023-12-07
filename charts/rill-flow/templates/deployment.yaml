@@ -31,8 +31,8 @@ spec:
             {{- if .Values.rillFlow.trace.enabled }}
             - name: RILL_FLOW_TRACE_ENDPOINT
               value: {{.Values.rillFlow.backend.env.rillFlowTraceEndpoint}}
-            - name: rill_flow_trace_query_url
-              value: {{.Values.rillFlow.backend.env.rillFlowTraceQueryUrl}}
+            - name: rill_flow_trace_query_host
+              value: {{.Values.rillFlow.backend.env.rillFlowTraceQueryHost}}
             {{- end}}
             - name: rill_flow_dag_redo_url
               value: {{ .Values.rillFlow.backend.env.rillFlowDagRedoUrl}}

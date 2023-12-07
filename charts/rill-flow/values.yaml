@@ -46,6 +46,8 @@ jaeger:
 global:
   imageRegistry: docker.io
 rillFlow:
+  trace:
+    enabled: true
   backend:
     image:
       repository: weibocom/rill-flow

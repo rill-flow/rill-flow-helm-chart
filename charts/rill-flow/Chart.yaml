@@ -1,6 +1,6 @@
 apiVersion: v2
 name: rill-flow
-version: 0.0.6
+version: 0.0.7
 description: rill flow orchestration engine
 keywords:
   - rill flow
@@ -8,7 +8,7 @@ keywords:
 home: https://weibocom.github.io/rill-flow
 sources:
   - https://github.io/weibocom/rill-flow
-maintainers: 
+maintainers:
   - name: axb
     url: https://github.com/qdaxb
 dependencies:
